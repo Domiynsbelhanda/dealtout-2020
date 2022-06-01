@@ -173,7 +173,7 @@
                             @php
                                 $photo=explode(',',$data->photo);
                             @endphp
-                            <img src="{{asset($photo[0])}}" alt="{{$photo[0]}}">
+                            <img src="{{asset('public'.$photo[0])}}" alt="{{$photo[0]}}">
                             <div class="content">
                                 <p>{{$data->cat_info['title']}}</p>
                                 <h3>{{$data->title}} <br>Up to<span> {{$data->discount}}%</span></h3>
@@ -212,8 +212,8 @@
                                         $photo=explode(',',$product->photo);
                                     // dd($photo);
                                     @endphp
-                                    <img class="default-img" src="{{asset($photo[0])}}" alt="{{$photo[0]}}">
-                                    <img class="hover-img" src="{{asset($photo[0])}}" alt="{{$photo[0]}}">
+                                    <img class="default-img" src="{{asset('public' . $photo[0])}}" alt="{{$photo[0]}}">
+                                    <img class="hover-img" src="{{asset('public'.$photo[0])}}" alt="{{$photo[0]}}">
                                     {{-- <span class="out-of-stock">Hot</span> --}}
                                 </a>
                                 <div class="button-head">
@@ -274,7 +274,7 @@
                                             $photo=explode(',',$product->photo);
                                             // dd($photo);
                                         @endphp
-                                        <img src="{{asset($photo[0])}}" alt="{{$photo[0]}}">
+                                        <img src="{{asset('public'.$photo[0])}}" alt="{{$photo[0]}}">
                                         <a href="{{route('add-to-cart',$product->slug)}}" class="buy"><i class="fa fa-shopping-bag"></i></a>
                                     </div>
                                 </div>
@@ -308,7 +308,7 @@
                                 $photo=explode(',',$data->photo);
                                 // dd($photo);
                             @endphp
-                            <img src="{{$photo[0]}}" alt="{{$photo[0]}}">
+                            <img src="{{'public'.$photo[0]}}" alt="{{$photo[0]}}">
                         </div>
                     </div>
                     <div class="col-lg-6 col-12 padding-left">
@@ -349,7 +349,7 @@
                     <div class="col-lg-4 col-md-6 col-12">
                         <!-- Start Single Blog  -->
                         <div class="shop-single-blog">
-                            <img src="{{asset($post->photo)}}" alt="{{$post->photo}}">
+                            <img src="{{asset('public'.$post->photo)}}" alt="{{$post->photo}}">
                             <div class="content">
                                 <p class="date">{{$post->created_at->format('d M , Y. D')}}</p>
                                 <a href="{{route('blog.detail',$post->slug)}}" class="title">{{$post->title}}</a>
@@ -434,7 +434,7 @@
                                                 @endphp
                                                 @foreach($photo as $data)
                                                     <div class="single-slider">
-                                                        <img src="{{asset($data)}}" alt="{{$data}}">
+                                                        <img src="{{asset('public'.$data)}}" alt="{{$data}}">
                                                     </div>
                                                 @endforeach
                                             </div>
