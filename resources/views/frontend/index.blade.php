@@ -39,7 +39,7 @@
         <div class="carousel-inner" role="listbox">
                 @foreach($banners as $key=>$banner)
                 <div class="carousel-item {{(($key==0)? 'active' : '')}}">
-                    <img class="first-slide" src="{{asset($banner->photo)}}" alt="First slide">
+                    <img class="first-slide" src="{{asset('public'.$banner->photo)}}" alt="First slide">
                     <div class="carousel-caption d-none d-md-block text-left">
                         <h1 class="wow fadeInDown">{{$banner->title}}</h1>
                         <p>{!! html_entity_decode($banner->description) !!}</p>
@@ -108,8 +108,8 @@
                                                     $photo=explode(',',$product->photo);
                                                 // dd($photo);
                                                 @endphp
-                                                <img class="default-img" src="{{asset($photo[0])}}" alt="{{$photo[0]}}">
-                                                <img class="hover-img" src="{{asset($photo[0])}}" alt="{{$photo[0]}}">
+                                                <img class="default-img" src="{{asset('public'.$photo[0])}}" alt="{{$photo[0]}}">
+                                                <img class="hover-img" src="{{asset('public'.$photo[0])}}" alt="{{$photo[0]}}">
                                                 @if($product->stock<=0)
                                                     <span class="out-of-stock">Sale out</span>
                                                 @elseif($product->condition=='new')
