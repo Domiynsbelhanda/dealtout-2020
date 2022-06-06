@@ -1,5 +1,5 @@
 @extends('frontend.layouts.master')
-@section('title','DEALTOUT || ACCUEIL')
+@section('title','DEALTOUT || Accueil')
 @section('main-content')
 <!-- Slider Area -->
 <section class="hero-slider">
@@ -50,11 +50,11 @@
         </div>
         <a class="carousel-control-prev" href="#Gslider" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
+        <span class="sr-only">Précédent</span>
         </a>
         <a class="carousel-control-next" href="#Gslider" role="button" data-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
+        <span class="sr-only">Suivant</span>
         </a>
     </section>
 @endif
@@ -68,7 +68,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section-title">
-                        <h2>Trending Item</h2>
+                        <h2>Top Articles</h2>
                     </div>
                 </div>
             </div>
@@ -84,11 +84,11 @@
                                 @endphp
                                 @if($categories)
                                 <button class="btn" style="background:black"data-filter="*">
-                                    All Products
+                                    Tout Le Produit
                                 </button>
                                     @foreach($categories as $key=>$cat)
 
-                                    <button class="btn" style="background:none;color:black;"data-filter=".{{$cat->id}}">
+                                    <button class="btn" style="background:none;color:black;" data-filter=".{{$cat->id}}">
                                         {{$cat->title}}
                                     </button>
                                     @endforeach
@@ -195,7 +195,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="section-title">
-                    <h2>Hot Item</h2>
+                    <h2>Meilleur Article</h2>
                 </div>
             </div>
         </div>
@@ -255,7 +255,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="shop-section-title">
-                            <h1>Latest Items</h1>
+                            <h1>Nouveauté</h1>
                         </div>
                     </div>
                 </div>
@@ -280,7 +280,7 @@
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-12 no-padding">
                                     <div class="content">
-                                        <h4 class="title"><a href="#">{{$product->title}}</a></h4>
+                                        <h4 class="title"><a href="{{route('product-detail',$product->slug)}}">{{$product->title}}">{{$product->title}}</a></h4>
                                         <p class="price with-discount">${{number_format($product->discount,2)}}</p>
                                     </div>
                                 </div>
@@ -334,84 +334,84 @@
     <!-- /End Cowndown Area -->
 @endforeach --}}
 <!-- Start Shop Blog  -->
-<section class="shop-blog section">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="section-title">
-                    <h2>From Our Blog</h2>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            @if($posts)
-                @foreach($posts as $post)
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <!-- Start Single Blog  -->
-                        <div class="shop-single-blog">
-                            <img src="{{asset('public'.$post->photo)}}" alt="{{$post->photo}}">
-                            <div class="content">
-                                <p class="date">{{$post->created_at->format('d M , Y. D')}}</p>
-                                <a href="{{route('blog.detail',$post->slug)}}" class="title">{{$post->title}}</a>
-                                <a href="{{route('blog.detail',$post->slug)}}" class="more-btn">Continue Reading</a>
-                            </div>
-                        </div>
-                        <!-- End Single Blog  -->
-                    </div>
-                @endforeach
-            @endif
+{{--<section class="shop-blog section">--}}
+{{--    <div class="container">--}}
+{{--        <div class="row">--}}
+{{--            <div class="col-12">--}}
+{{--                <div class="section-title">--}}
+{{--                    <h2>From Our Blog</h2>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--        <div class="row">--}}
+{{--            @if($posts)--}}
+{{--                @foreach($posts as $post)--}}
+{{--                    <div class="col-lg-4 col-md-6 col-12">--}}
+{{--                        <!-- Start Single Blog  -->--}}
+{{--                        <div class="shop-single-blog">--}}
+{{--                            <img src="{{asset('public'.$post->photo)}}" alt="{{$post->photo}}">--}}
+{{--                            <div class="content">--}}
+{{--                                <p class="date">{{$post->created_at->format('d M , Y. D')}}</p>--}}
+{{--                                <a href="{{route('blog.detail',$post->slug)}}" class="title">{{$post->title}}</a>--}}
+{{--                                <a href="{{route('blog.detail',$post->slug)}}" class="more-btn">Continue Reading</a>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                        <!-- End Single Blog  -->--}}
+{{--                    </div>--}}
+{{--                @endforeach--}}
+{{--            @endif--}}
 
-        </div>
-    </div>
-</section>
+{{--        </div>--}}
+{{--    </div>--}}
+{{--</section>--}}
 <!-- End Shop Blog  -->
 
 <!-- Start Shop Services Area -->
-<section class="shop-services section home">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-3 col-md-6 col-12">
-                <!-- Start Single Service -->
-                <div class="single-service">
-                    <i class="ti-rocket"></i>
-                    <h4>Free shiping</h4>
-                    <p>Orders over $100</p>
-                </div>
-                <!-- End Single Service -->
-            </div>
-            <div class="col-lg-3 col-md-6 col-12">
-                <!-- Start Single Service -->
-                <div class="single-service">
-                    <i class="ti-reload"></i>
-                    <h4>Free Return</h4>
-                    <p>Within 30 days returns</p>
-                </div>
-                <!-- End Single Service -->
-            </div>
-            <div class="col-lg-3 col-md-6 col-12">
-                <!-- Start Single Service -->
-                <div class="single-service">
-                    <i class="ti-lock"></i>
-                    <h4>Sucure Payment</h4>
-                    <p>100% secure payment</p>
-                </div>
-                <!-- End Single Service -->
-            </div>
-            <div class="col-lg-3 col-md-6 col-12">
-                <!-- Start Single Service -->
-                <div class="single-service">
-                    <i class="ti-tag"></i>
-                    <h4>Best Peice</h4>
-                    <p>Guaranteed price</p>
-                </div>
-                <!-- End Single Service -->
-            </div>
-        </div>
-    </div>
-</section>
+{{--<section class="shop-services section home">--}}
+{{--    <div class="container">--}}
+{{--        <div class="row">--}}
+{{--            <div class="col-lg-3 col-md-6 col-12">--}}
+{{--                <!-- Start Single Service -->--}}
+{{--                <div class="single-service">--}}
+{{--                    <i class="ti-rocket"></i>--}}
+{{--                    <h4>Free shiping</h4>--}}
+{{--                    <p>Orders over $100</p>--}}
+{{--                </div>--}}
+{{--                <!-- End Single Service -->--}}
+{{--            </div>--}}
+{{--            <div class="col-lg-3 col-md-6 col-12">--}}
+{{--                <!-- Start Single Service -->--}}
+{{--                <div class="single-service">--}}
+{{--                    <i class="ti-reload"></i>--}}
+{{--                    <h4>Free Return</h4>--}}
+{{--                    <p>Within 30 days returns</p>--}}
+{{--                </div>--}}
+{{--                <!-- End Single Service -->--}}
+{{--            </div>--}}
+{{--            <div class="col-lg-3 col-md-6 col-12">--}}
+{{--                <!-- Start Single Service -->--}}
+{{--                <div class="single-service">--}}
+{{--                    <i class="ti-lock"></i>--}}
+{{--                    <h4>Sucure Payment</h4>--}}
+{{--                    <p>100% secure payment</p>--}}
+{{--                </div>--}}
+{{--                <!-- End Single Service -->--}}
+{{--            </div>--}}
+{{--            <div class="col-lg-3 col-md-6 col-12">--}}
+{{--                <!-- Start Single Service -->--}}
+{{--                <div class="single-service">--}}
+{{--                    <i class="ti-tag"></i>--}}
+{{--                    <h4>Best Peice</h4>--}}
+{{--                    <p>Guaranteed price</p>--}}
+{{--                </div>--}}
+{{--                <!-- End Single Service -->--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </div>--}}
+{{--</section>--}}
 <!-- End Shop Services Area -->
 
-@include('frontend.layouts.newsletter')
+{{--@include('frontend.layouts.newsletter')--}}
 
 <!-- Modal -->
 @if($product_lists)
