@@ -1,7 +1,7 @@
 <!-- Meta Tag -->
 @yield('meta')
 <!-- Title Tag  -->
-<title>DealTout App</title>
+<title>@yield('title')</title>
 <!-- Favicon -->
 <link rel="icon" type="image/png" href="public/favicon.png">
 <!-- Web Font -->
