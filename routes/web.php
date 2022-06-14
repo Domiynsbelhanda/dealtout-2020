@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -182,4 +183,8 @@ Route::group(['prefix'=>'/user','middleware'=>['user']],function(){
 
 Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
     \UniSharp\LaravelFilemanager\Lfm::routes();
+});
+
+Route::get('/linkstorage', function () {
+    Artisan::call('storage:link');
 });
