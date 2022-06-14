@@ -1,6 +1,6 @@
 @extends('backend.layouts.master')
 
-@section('title','E-SHOP || Banner Create')
+@section('title','DEALTOUT || Banner Create')
 
 @section('main-content')
 
@@ -40,7 +40,7 @@
           <span class="text-danger">{{$message}}</span>
           @enderror
         </div>
-        
+
         <div class="form-group">
           <label for="status" class="col-form-label">Status <span class="text-danger">*</span></label>
           <select name="status" class="form-control">
@@ -65,7 +65,7 @@
 <link rel="stylesheet" href="{{asset('backend/summernote/summernote.min.css')}}">
 @endpush
 @push('scripts')
-<script src="/vendor/laravel-filemanager/js/stand-alone-button.js"></script>
+<script src="{{asset('public/vendor/laravel-filemanager/js/stand-alone-button.js')}}"></script>
 <script src="{{asset('backend/summernote/summernote.min.js')}}"></script>
 <script>
     $('#lfm').filemanager('image');

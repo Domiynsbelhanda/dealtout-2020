@@ -41,9 +41,9 @@
             </tr>
           </tfoot>
           <tbody>
-           
-            @foreach($categories as $category)   
-              @php 
+
+            @foreach($categories as $category)
+              @php
               $parent_cats=DB::table('categories')->select('title')->where('id',$category->parent_id)->get();
               // dd($parent_cats);
 
@@ -60,7 +60,7 @@
                     </td>
                     <td>
                         @if($category->photo)
-                            <img src="{{$category->photo}}" class="img-fluid" style="max-width:80px" alt="{{$category->photo}}">
+                            <img src="{{asset('public'. $category->photo)}}" class="img-fluid" style="max-width:80px" alt="{{$category->photo}}">
                         @else
                             <img src="{{asset('backend/img/thumbnail-default.jpg')}}" class="img-fluid" style="max-width:80px" alt="avatar.png">
                         @endif
@@ -75,7 +75,7 @@
                     <td>
                         <a href="{{route('category.edit',$category->id)}}" class="btn btn-primary btn-sm float-left mr-1" style="height:30px; width:30px;border-radius:50%" data-toggle="tooltip" title="edit" data-placement="bottom"><i class="fas fa-edit"></i></a>
                     <form method="POST" action="{{route('category.destroy',[$category->id])}}">
-                      @csrf 
+                      @csrf
                       @method('delete')
                           <button class="btn btn-danger btn-sm dltBtn" data-id={{$category->id}} style="height:30px; width:30px;border-radius:50%" data-toggle="tooltip" data-placement="bottom" title="Delete"><i class="fas fa-trash-alt"></i></button>
                         </form>
@@ -92,7 +92,7 @@
                             </div>
                             <div class="modal-body">
                               <form method="post" action="{{ route('categorys.destroy',$user->id) }}">
-                                @csrf 
+                                @csrf
                                 @method('delete')
                                 <button type="submit" class="btn btn-danger" style="margin:auto; text-align:center">Parmanent delete user</button>
                               </form>
@@ -100,7 +100,7 @@
                           </div>
                         </div>
                     </div> --}}
-                </tr>  
+                </tr>
             @endforeach
           </tbody>
         </table>
@@ -133,7 +133,7 @@
   <!-- Page level custom scripts -->
   <script src="{{asset('backend/js/demo/datatables-demo.js')}}"></script>
   <script>
-      
+
       $('#banner-dataTable').DataTable( {
             "columnDefs":[
                 {
@@ -146,7 +146,7 @@
         // Sweet alert
 
         function deleteData(id){
-            
+
         }
   </script>
   <script>
