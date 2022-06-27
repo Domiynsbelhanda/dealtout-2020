@@ -116,6 +116,11 @@
       <path value="$PROJECT_DIR$/vendor/spatie/laravel-newsletter" />
       <path value="$PROJECT_DIR$/vendor/phpunit/php-token-stream" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php81" />
+      <path value="$PROJECT_DIR$/vendor/laravel-filemanager/images" />
+      <path value="$PROJECT_DIR$/vendor/laravel-filemanager/files" />
+      <path value="$PROJECT_DIR$/vendor/laravel-filemanager/css" />
+      <path value="$PROJECT_DIR$/vendor/laravel-filemanager/js" />
+      <path value="$PROJECT_DIR$/vendor/laravel-filemanager/img" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.2" />
