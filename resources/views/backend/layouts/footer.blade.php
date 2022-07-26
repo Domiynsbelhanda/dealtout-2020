@@ -3,7 +3,7 @@
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright &copy; <a href="https://www.domiyns.com" target="_blank">Dominique YOuness</a> 2022</span>
+            <span>Copyright &copy; <a >DealTout Inc.</a> 2022</span>
           </div>
         </div>
       </footer>

@@ -91,7 +91,9 @@ Route::post('product/{slug}/review','ProductReviewController@store')->name('revi
 //Route::get('cancel', 'PayPalController@cancel')->name('payment.cancel');
 //Route::get('payment/success', 'PayPalController@success')->name('payment.success');
 
-
+Route::get('/filemanagers',function(){
+    return view('backend.layouts.file-manager');
+})->name('file-manager');
 
 // Backend section start
 
