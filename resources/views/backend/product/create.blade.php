@@ -154,32 +154,31 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
 @endpush
 @push('scripts')
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha512-DUC8yqWf7ez3JD1jszxCWSVB0DMP78eOyBpMa5aJki1bIRARykviOuImIczkxlj1KhVSyS16w2FSQetkD4UU2w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="{{asset('public/vendor/laravel-filemanager/js/stand-alone-button.js')}}"></script>
 <script src="{{asset('backend/summernote/summernote.min.js')}}"></script>
 
-{{--<script>--}}
-{{--    $('#lfm').filemanager('image');--}}
+<script>
+    $('#lfm').filemanager('image');
 
-{{--    $(document).ready(function() {--}}
-{{--      $('#summary').summernote({--}}
-{{--        placeholder: "Write short description.....",--}}
-{{--          tabsize: 2,--}}
-{{--          height: 100--}}
-{{--      });--}}
-{{--    });--}}
+    $(document).ready(function() {
+      $('#summary').summernote({
+        placeholder: "Write short description.....",
+          tabsize: 2,
+          height: 100
+      });
+    });
 
-{{--    $(document).ready(function() {--}}
-{{--      $('#description').summernote({--}}
-{{--        placeholder: "Write detail description.....",--}}
-{{--          tabsize: 2,--}}
-{{--          height: 150--}}
-{{--      });--}}
-{{--    });--}}
-{{--    // $('select').selectpicker();--}}
+    $(document).ready(function() {
+      $('#description').summernote({
+        placeholder: "Write detail description.....",
+          tabsize: 2,
+          height: 150
+      });
+    });
+    // $('select').selectpicker();
 
-{{--</script>--}}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</script>
 <script>
   $('#cat_id').change(function(){
     var cat_id=$(this).val();
