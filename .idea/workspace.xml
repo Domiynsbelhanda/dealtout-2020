@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f6f0d873-2e8b-4505-b4f1-cd18b6017f5e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/vendor/jquery/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/vendor/jquery/jquery.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/vendor/jquery/jquery.min.map" beforeDir="false" afterPath="$PROJECT_DIR$/backend/vendor/jquery/jquery.min.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/vendor/jquery/jquery.slim.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/vendor/jquery/jquery.slim.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/vendor/jquery/jquery.slim.min.map" beforeDir="false" afterPath="$PROJECT_DIR$/backend/vendor/jquery/jquery.slim.min.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/product/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/product/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/layouts/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/layouts/footer.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,7 +197,8 @@
       <workItem from="1656347673296" duration="5847000" />
       <workItem from="1657700065686" duration="1316000" />
       <workItem from="1658821757820" duration="906000" />
-      <workItem from="1660291257675" duration="4162000" />
+      <workItem from="1660291257675" duration="5605000" />
+      <workItem from="1660549671868" duration="591000" />
     </task>
     <servers />
   </component>
