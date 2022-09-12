@@ -97,7 +97,7 @@ Route::get('/filemanagers',function(){
 
 // Backend section start
 
-Route::group(['prefix'=>'/admin','middleware'=>['auth','admin']],function(){
+Route::group(['prefix'=>'/admin','middleware'=>['auth','admin', 'user']],function(){
     Route::get('/','AdminController@index')->name('admin');
     Route::get('/file-manager',function(){
         return view('backend.layouts.file-manager');
@@ -157,6 +157,22 @@ Route::group(['prefix'=>'/admin','middleware'=>['auth','admin']],function(){
 
  //User section start
 Route::group(['prefix'=>'/user','middleware'=>['user']],function(){
+
+    Route::resource('UserBrand','BrandController');
+    // Category
+    Route::resource('/category','CategoryController');
+    // Product
+    Route::resource('/product','ProductController');
+    // Ajax for sub category
+    Route::post('/category/{id}/child','CategoryController@getChildByParent');
+    // POST category
+    Route::resource('/post-category','PostCategoryController');
+    // Post tag
+    Route::resource('/post-tag','PostTagController');
+    // Post
+    Route::resource('/post','PostController');
+
+
     Route::get('/','HomeController@index')->name('user');
      // Profile
      Route::get('/profile','HomeController@profile')->name('user-profile');

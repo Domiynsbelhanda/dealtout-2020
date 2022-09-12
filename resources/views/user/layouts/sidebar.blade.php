@@ -25,6 +25,51 @@
         <div class="sidebar-heading">
             Shop
         </div>
+
+    <!-- Categories -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#categoryCollapse" aria-expanded="true" aria-controls="categoryCollapse">
+            <i class="fas fa-sitemap"></i>
+            <span>Category</span>
+        </a>
+        <div id="categoryCollapse" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Category Options:</h6>
+                <a class="collapse-item" href="{{route('category.index')}}">Category</a>
+                <a class="collapse-item" href="{{route('category.create')}}">Add Category</a>
+            </div>
+        </div>
+    </li>
+    {{-- Products --}}
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#productCollapse" aria-expanded="true" aria-controls="productCollapse">
+            <i class="fas fa-cubes"></i>
+            <span>Products</span>
+        </a>
+        <div id="productCollapse" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Product Options:</h6>
+                <a class="collapse-item" href="{{route('product.index')}}">Products</a>
+                <a class="collapse-item" href="{{route('product.create')}}">Add Product</a>
+            </div>
+        </div>
+    </li>
+
+    {{-- Brands --}}
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#brandCollapse" aria-expanded="true" aria-controls="brandCollapse">
+            <i class="fas fa-table"></i>
+            <span>Brands</span>
+        </a>
+        <div id="brandCollapse" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Brand Options:</h6>
+                <a class="collapse-item" href="{{route('brand.index')}}">Brands</a>
+                <a class="collapse-item" href="{{route('brand.create')}}">Add Brand</a>
+            </div>
+        </div>
+    </li>
+
     <!--Orders -->
     <li class="nav-item">
         <a class="nav-link" href="{{route('user.order.index')}}">
@@ -39,7 +84,7 @@
             <i class="fas fa-comments"></i>
             <span>Reviews</span></a>
     </li>
-    
+
 
     <!-- Divider -->
     <hr class="sidebar-divider">
